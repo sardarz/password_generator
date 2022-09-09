@@ -1,0 +1,15 @@
+:root {
+  --clr-primary-600: #a4ffaf;
+  --clr-primary-500: #24232c;
+  --clr-primary-400: #817d92;
+  --clr-primary-300: #e6e5ea;
+
+  --clr-secondary-600: #18171f;
+  --clr-secondary-500: #f64a4a;
+  --clr-secondary-400: #fb7c58;
+  --clr-secondary-300: #f8cd65;
+}
+
+body {
+  font-family: 'JetBrains Mono', monospace;
+}
