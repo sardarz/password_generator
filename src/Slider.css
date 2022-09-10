@@ -1,8 +1,8 @@
 .slider {
+  position: relative;
   width: 100%;
   height: 8px;
   background-color: var(--clr-secondary-600);
-  position: relative;
 }
 
 .thumb {
@@ -14,4 +14,24 @@
   border-radius: 50%;
   background-color: var(--clr-primary-300);
   cursor: pointer;
+  border: 3px solid var(--clr-primary-300);
+  z-index: 10;
+}
+
+.thumb:hover {
+  background-color: transparent;
+  border-color: var(--clr-primary-600);
+}
+
+.thumb.hovering {
+  background-color: transparent;
+  border-color: var(--clr-primary-600);
+}
+
+.progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 8px;
+  background-color: var(--clr-primary-600);
 }
