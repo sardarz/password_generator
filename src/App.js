@@ -1,6 +1,14 @@
+import { useEffect, useRef, useState } from 'react';
 import './App.css';
 import {ReactComponent as Copy} from "./images/icon-copy.svg"
+import Slider from './Slider';
 function App() {
+  const lenEl = useRef(null)
+  const [length, setLength] = useState(8)
+  useEffect(() => {
+    lenEl.current.innerHTML = length
+  }, [length])
+
   return (
     <div className="App">
       <main className="main">
@@ -14,10 +22,9 @@ function App() {
             <div className="generate">
               <div className="generate-title-wrapper">
                 <p className="generate-title">Character Length</p>
-                <p className="generated-length">10</p>
+                <p className="generated-length" ref={lenEl}>10</p>
               </div>
-              <div className="slider">here goes the slider</div>
-              
+              <Slider length={length} setLength={setLength} />
             </div>
           </div>
         </div>
