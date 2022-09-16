@@ -80,6 +80,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 7.1rem;
   padding: 2rem 3.2rem;
   background-color: var(--clr-secondary-600);
   margin: 3.2rem 0;
@@ -111,6 +112,32 @@ body {
   height: 2.8rem;
   border: 2px solid var(--clr-primary-300);
 }
+
+.bars.strong .bar {
+  background-color: var(--clr-primary-600);
+  border-color: var(--clr-primary-600);
+}
+
+.bars.medium .bar:not(:last-child) {
+  background-color: #F8CD65;
+  border-color: #F8CD65;
+}
+
+.bars.weak .bar:first-child {
+  background-color: #FB7C58;
+  border-color: #FB7C58;
+}
+
+.bars.weak .bar:nth-child(2) {
+  background-color: #FB7C58;
+  border-color: #FB7C58;
+}
+
+.bars.too-weak .bar:first-child {
+  background-color: #F64A4A;
+  border-color: #F64A4A;
+}
+
 
 .btn-generate {
   display: block;

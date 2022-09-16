@@ -17,6 +17,7 @@ const CHARS = {
 
 function App() {
   const lenEl = useRef(null);
+  const [passwordStrength, setPasswordStrength] = useState('')
   const [length, setLength] = useState(8);
   const [pass, setPass] = useState('')
   const [passwordParams, setPasswordParams] = useState({
@@ -48,6 +49,25 @@ function App() {
   function setNewPassword() {
     let newPassword = getNewPassword();
     setPass(newPassword)
+    let selectedParamsCount = 0;
+
+    for (const value of Object.values(passwordParams)) {
+      if (value) selectedParamsCount++
+    }
+
+    if (selectedParamsCount === 0) {
+
+    } else if (selectedParamsCount === 1) {
+      setPasswordStrength('too weak')
+    } else if (selectedParamsCount === 2) {
+      setPasswordStrength('weak')
+    } else if (selectedParamsCount === 3) {
+      setPasswordStrength('medium')
+    } else if (selectedParamsCount === 4 && length < 11) {
+      setPasswordStrength('medium')
+    } else if (selectedParamsCount === 4) {
+      setPasswordStrength('strong')
+    }
   }
 
   return (
@@ -73,8 +93,8 @@ function App() {
                 <div className="password-strength">
                   <p>strength</p>
                   <div className="strength-output">
-                    <p>medium</p>
-                    <div className="bars">
+                    <p>{passwordStrength}</p>
+                    <div className={`bars ${passwordStrength === 'too weak' ? 'too-weak' : passwordStrength}`}>
                       <div className="bar"></div>
                       <div className="bar"></div>
                       <div className="bar"></div>
