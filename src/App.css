@@ -15,6 +15,8 @@ body {
   min-height: 100vh;
   background-color: var(--clr-secondary-600);
   color: var(--clr-primary-300);
+  padding-top: 13.3rem;
+
 }
 
 .container {
@@ -24,7 +26,6 @@ body {
 }
 
 .main-title {
-  margin-top: 13.3rem;
   margin-bottom: 3.1rem;
   font-size: 2.4rem;
   color: var(--clr-primary-400);
@@ -46,6 +47,7 @@ body {
 }
 
 .copy-logo {
+  transition: transform .05s ease-in-out;
   cursor: pointer;
 }
 
@@ -55,6 +57,10 @@ body {
 
 .copy-logo:hover path{
   fill: white;
+}
+
+.copy-logo:active {
+  transform: translateY(1px);
 }
 
 .generate {
@@ -158,6 +164,10 @@ body {
   color: var(--clr-primary-600);
 }
 
+.btn-generate:active {
+  transform: translateY(2px);
+}
+
 .arrow-right path {
   transition: fill .3s ease;
 }
@@ -168,6 +178,10 @@ body {
 
 @media (max-width: 500px) {
   .main-output {
+    font-size: 2.4rem;
+  }
+
+  .main-password {
     font-size: 2.4rem;
   }
 

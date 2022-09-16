@@ -4,9 +4,6 @@ import { CheckboxContext } from "./CheckboxContext";
 
 function Checkbox({ htmlFor, text }) {
   const { passwordParams, setPasswordParams } = useContext(CheckboxContext);
-  // useEffect(() => {
-  //   console.log(passwordParams, text);
-  // });
 
   return (
     <div className="checkboxWrapper">
@@ -17,7 +14,7 @@ function Checkbox({ htmlFor, text }) {
             [htmlFor]: !passwordParams[htmlFor],
           })
         }
-        value={passwordParams[htmlFor]}
+        checked={passwordParams[htmlFor]}
         className="checkbox"
         type="checkbox"
         id={htmlFor}
