@@ -14,7 +14,7 @@ function Slider({ length, setLength }) {
     slider_width = sliderRef.current.getBoundingClientRect().width;
     pillarDistance = Math.ceil(slider_width / pillars);
     pillarHalf = Math.round(pillarDistance / 2);
-  }, [length]);
+  });
 
   function onMouseDown(evt) {
     let thumbRect = thumbRef.current.getBoundingClientRect();
