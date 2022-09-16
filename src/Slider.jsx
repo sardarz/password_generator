@@ -29,7 +29,7 @@ function Slider({ length, setLength }) {
       if (newLeft > sliderRect.width - thumbRect.width)
         newLeft = sliderRect.width - thumbRect.width;
       thumbRef.current.style.left = newLeft + "px";
-      progressRef.current.style.width = newLeft + 2 + "px";
+      progressRef.current.style.width = newLeft + "px";
       let counter = 0;
       while (counter * pillarDistance <= newLeft) counter++;
       setLength(counter + 7);

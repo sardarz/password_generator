@@ -1,0 +1,9 @@
+form {
+  margin-top: 4.2rem;
+}
+
+.checkboxesWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}

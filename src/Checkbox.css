@@ -1,0 +1,40 @@
+.checkboxWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox {
+  opacity: 0;
+  width: 2rem;
+  height: 2rem;
+}
+
+
+.checkboxLabel {
+  position: relative;
+  margin-left: 2.4rem;
+  cursor: pointer;
+}
+
+.checkboxLabel::before {
+  content: '';
+  position: absolute;
+  left: -4.4rem;
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid #E6E5EA;
+  transition: border-color .3s ease;
+}
+
+.checkbox:checked + .checkboxLabel::before {
+  background-image: url("./images/icon-check.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--clr-primary-600);
+  border-color: var(--clr-primary-600);
+}
+
+.checkboxLabel:hover::before {
+  border-color: var(--clr-primary-600);
+}
