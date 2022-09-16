@@ -82,7 +82,7 @@ body {
   justify-content: space-between;
   padding: 2rem 3.2rem;
   background-color: var(--clr-secondary-600);
-  margin-top: 3.2rem;
+  margin: 3.2rem 0;
 }
 
 .password-strength > p {
@@ -111,3 +111,31 @@ body {
   height: 2.8rem;
   border: 2px solid var(--clr-primary-300);
 }
+
+.btn-generate {
+  display: block;
+  padding: 1.9rem 0 1.8rem;
+  width: 100%;
+  background-color: var(--clr-primary-600);
+  border: 2px solid var(--clr-primary-600);
+  outline: none;
+  color: var(--clr-secondary-600);
+  text-transform: uppercase;
+  line-height: 2.4rem;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+.btn-generate:hover {
+  background-color: transparent;
+  color: var(--clr-primary-600);
+}
+
+.arrow-right path {
+  transition: fill .3s ease;
+}
+
+.btn-generate:hover .arrow-right path {
+  fill: var(--clr-primary-600)
+}
+
