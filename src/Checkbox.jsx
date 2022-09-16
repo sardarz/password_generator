@@ -5,7 +5,7 @@ import { CheckboxContext } from "./CheckboxContext";
 function Checkbox({ htmlFor, text }) {
   const { passwordParams, setPasswordParams } = useContext(CheckboxContext);
   useEffect(() => {
-    console.log(passwordParams);
+    console.log(passwordParams, text);
   });
 
   return (

@@ -76,3 +76,38 @@ body {
   color: var(--clr-primary-600);
 }
 
+.password-strength {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 3.2rem;
+  background-color: var(--clr-secondary-600);
+  margin-top: 3.2rem;
+}
+
+.password-strength > p {
+  color: var(--clr-primary-400);
+  font-size: 1.8rem;
+}
+
+.password-strength p {
+  text-transform: uppercase;
+}
+
+.strength-output {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  font-size: 2.4rem;
+}
+
+.bars {
+  display: flex;
+  gap: 8px;
+}
+
+.bar {
+  width: 1rem;
+  height: 2.8rem;
+  border: 2px solid var(--clr-primary-300);
+}

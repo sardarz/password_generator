@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import "./App.css";
 import { ReactComponent as Copy } from "./images/icon-copy.svg";
+import { ReactComponent as ArrowRight } from "./images/icon-arrow-right.svg";
 import Slider from "./Slider";
 import Form from "./Form";
 import { CheckboxContext } from "./CheckboxContext";
@@ -35,6 +36,19 @@ function App() {
                 </div>
                 <Slider length={length} setLength={setLength} />
                 <Form />
+                <div className="password-strength">
+                  <p>strength</p>
+                  <div className="strength-output">
+                    <p>medium</p>
+                    <div className="bars">
+                      <div className="bar"></div>
+                      <div className="bar"></div>
+                      <div className="bar"></div>
+                      <div className="bar"></div>
+                    </div>
+                  </div>
+                </div>
+                <button className="btn-generate">Generate <ArrowRight /></button>
               </div>
             </div>
           </div>
