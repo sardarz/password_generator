@@ -139,3 +139,21 @@ body {
   fill: var(--clr-primary-600)
 }
 
+@media (max-width: 500px) {
+  .main-output {
+    font-size: 2.4rem;
+  }
+
+  .generate {
+    padding: 1.6rem;
+  }
+
+  .password-strength > p {
+    font-size: 1.6rem;
+  }
+
+  .strength-output > p {
+    font-size: 1.8rem;
+  }
+}
+

@@ -38,3 +38,9 @@
 .checkboxLabel:hover::before {
   border-color: var(--clr-primary-600);
 }
+
+@media screen and (max-width: 500px) {
+  .checkboxLabel {
+    font-size: 1.6rem;
+  }
+}
